@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.musicwiki.fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_genreDetailFragment"
+            app:destination="@id/genreDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/genreDetailFragment"
+        android:name="com.example.musicwiki.fragments.GenreDetailFragment"
+        android:label="fragment_genre_detail"
+        tools:layout="@layout/fragment_genre_detail" >
+        <action
+            android:id="@+id/action_genreDetailFragment_to_artistAlbumFragment"
+            app:destination="@id/artistAlbumFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistAlbumFragment"
+        android:name="com.example.musicwiki.fragments.ArtistAlbumFragment"
+        android:label="fragment_artist_album"
+        tools:layout="@layout/fragment_artist_album" />
+</navigation>
